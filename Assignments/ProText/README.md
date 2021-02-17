@@ -64,3 +64,7 @@ Install `ProText` on your system using :
        dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma
 ```
 ---
+### Finally WordCloud
+   ```
+   WCloud(dfcleaned.tweets)
+   ```
