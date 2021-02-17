@@ -49,8 +49,10 @@ pip install ProText
 
    + Execution of single preprocessing property on dataframe
    
+   + Execution of single preprocessing property on dataframe
+   
    ```
-   dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)
+           dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)
    
    ```
    
