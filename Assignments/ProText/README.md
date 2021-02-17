@@ -29,7 +29,7 @@ This packages reuses funstions from nltk, Textblob and wordcloud for the above o
 Install `ProText` on your system using :
 
 ``` 
-pip install ProText
+    pip install ProText 
 ```
 
 ## Text Preprocessing user guide on --df-- or --text--
@@ -37,55 +37,30 @@ pip install ProText
    + Importing library
        
        ``` 
-       from ProText import * 
-       
+       from ProText import *        
        ```
-                   or
+        or
        ``` 
-       from ProText import gen, low, dig,stopw, lemma, stem, spell, clean_len, WCloud
-       
+       from ProText import gen, low, dig,stopw, lemma, stem, spell, clean_len, WCloud       
        ```
 
    + Execution of single preprocessing property on dataframe
    
-   + Execution of single preprocessing property on dataframe
-   
    ```
-           dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)
-   
+       dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)   
    ```
    
    + Execution of single preprocessing property on text
    
    ```
-   tweets = "Second RCMP NL employee tests positive for Covid-19 - https://t.co/ihQIZWJEWY"
-   tweets = tweets.gen()
-   
+       tweets = "Second RCMP NL employee tests positive for Covid-19 - https://t.co/ihQIZWJEWY"
+       tweets = tweets.gen()   
    ```
    
-> If there are multiple lines, better convert to Dataframe
+>If there are multiple lines, better convert to Dataframe
    
-   - Sequential operation in a single line of command
+   + Sequential operation in a single line of command
    
    ```
-   dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma
+       dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma
    ```
-       
-       ``` from ProText import * ```
-                   or
-       ``` from ProText import gen, low, dig,stopw, lemma, stem, spell, clean_len, WCloud 
-
-   + Execution of single preprocessing property on dataframe
-   
-   ```dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)```
-   
-   + Execution of single preprocessing property on text
-   
-   ```tweets = "Second RCMP NL employee tests positive for Covid-19 - https://t.co/ihQIZWJEWY"
-   tweets = tweets.gen()```
-   
-> If there are multiple lines, better convert to Dataframe
-   
-   - Sequential operation in a single line of command
-   
-   ```dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma```
