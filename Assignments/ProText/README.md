@@ -16,7 +16,7 @@ This pip package helps you execute text cleaning like
 
 All of these can be executed in a single line of command sequentially in any prefered order or can be executed in multiline.
 
-> Package can be executed on both panda DataFrames and single line of text <
+> Package can be executed on both panda DataFrames and single line of text >
 
 This tool can be really helpful and No one neither needs to rememebr various syntax associated with processing nor packages.
 
