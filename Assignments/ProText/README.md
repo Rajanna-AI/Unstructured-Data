@@ -29,8 +29,7 @@ This packages reuses funstions from nltk, Textblob and wordcloud for the above o
 Install `ProText` on your system using :
 
 ``` 
-pip install ProText 
-
+pip install ProText
 ```
 
 ## Text Preprocessing user guide on --df-- or --text--
