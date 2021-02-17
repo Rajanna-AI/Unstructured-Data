@@ -32,7 +32,7 @@ Install `ProText` on your system using :
     pip install ProText 
    ```
 ----
-## Text Preprocessing user guide on --df-- or --text--
+## Text Preprocessing user guide on df or text
 ----
    + Importing library
        
