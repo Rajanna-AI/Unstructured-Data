@@ -59,7 +59,8 @@ Install `ProText` on your system using :
    
 >If there are multiple lines, better convert to Dataframe
    
-### __Sequential operation in a single line of command__
+### Sequential operation in a single line of command
+----
    
       ```
        dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma
