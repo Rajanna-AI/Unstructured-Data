@@ -61,7 +61,7 @@ Install `ProText` on your system using :
 ---   
 ### ** Sequential operation in a single line of command **
 ```
-       dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply.lemma
+       dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply(lemma)
 ```
 ---
 ### Finally WordCloud
