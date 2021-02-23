@@ -44,7 +44,7 @@ Install `ProText` on your system using :
        ```
         or
        ``` 
-       from ProText import gen, low, dig,stopw, lemma, stem, spell, clean_len, WCloud       
+       from ProText import gen, low, dig,stopw, lemma, stem, spell, clean_len, WCloud, countvec, tfidf       
        ```
 
    + Execution of single preprocessing property on dataframe
@@ -53,11 +53,12 @@ Install `ProText` on your system using :
        dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen)   
       ```
    
-   + Execution of single preprocessing property on text
+   + Adding more stop words to "stopwords.words" library list
    
       ```
-       tweets = "Second RCMP NL employee tests positive for Covid-19 - https://t.co/ihQIZWJEWY"
-       tweets = tweets.gen()   
+       stopadd = ['sample', 'much', 'thank']
+      
+       df['tweet']= df['tweet'].apply(stopw, args=(stopadd,))
        ```
  
 > If there are multiple lines, better convert to Dataframe
