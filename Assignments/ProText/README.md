@@ -34,9 +34,9 @@ Install `ProText` on your system using :
    ``` 
     pip install ProText 
    ```
----
+
 ## Text Preprocessing user guide on df or text
----
+
    + Importing library
        
        ``` 
@@ -63,13 +63,16 @@ Install `ProText` on your system using :
  
 > If there are multiple lines, better convert to Dataframe
 
----   
+ 
 ###  Sequential operation in a single line of command
 ```
        dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply(lemma)
 ```
----
 
+### Finally WordCloud
+   ```
+   WCloud(dfcleaned.tweets)
+   ```
 ## Feature extraction user guide on df or on list
 + For CountVectorizer
 ```
@@ -79,8 +82,3 @@ Install `ProText` on your system using :
 ```
        df1 = tfidf(df)
 ```
-
-### Finally WordCloud
-   ```
-   WCloud(dfcleaned.tweets)
-   ```
