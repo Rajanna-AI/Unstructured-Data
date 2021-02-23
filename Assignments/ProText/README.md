@@ -1,11 +1,12 @@
-# ProText makes your Text Preprocessing tasks easy for NLP applications
+# ProText makes your Text Preprocessing & Feature extraction tasks easy for NLP applications
 
-A Helper pip package for text prepocessing. 
+A Helper pip package for text prepocessing & feature extraction. 
 
-This pip package helps you execute text cleaning like 
+This pip package helps you execute **text cleaning** like 
 
    + General cleaning (Removal of URL, @username, addtional whitespaces, Hashtags, punctuations..etc)
-   + Stopword removal, 
+   + Stopword removal
+   + Adding more stop words to "stopwords.words" library list
    + Stemming, 
    + lemmatiing, 
    + Removal of single or two character word, 
@@ -16,11 +17,13 @@ This pip package helps you execute text cleaning like
 
 All of these can be executed in a single line of command sequentially in any prefered order or can be executed in multiline.
 
+Also feature extrations like **CountVectorizer & TfidfVectorizer**
+
 > Package can be executed on both panda DataFrames and single line of text
 
 This tool can be really helpful and No one neither needs to rememebr various syntax associated with processing nor packages.
 
-This packages reuses funstions from nltk, Textblob and wordcloud for the above operations.
+This packages reuses functions from nltk, Textblob and wordcloud for the above operations.
 
 ### Assumptions:
    - Assuming python is installed on your system.
@@ -56,14 +59,26 @@ Install `ProText` on your system using :
        tweets = "Second RCMP NL employee tests positive for Covid-19 - https://t.co/ihQIZWJEWY"
        tweets = tweets.gen()   
        ```
-   
->If there are multiple lines, better convert to Dataframe
+ 
+> If there are multiple lines, better convert to Dataframe
+
 ---   
-### ** Sequential operation in a single line of command **
+###  Sequential operation in a single line of command
 ```
        dfcleaned['tweets'] = dfcleaned['tweets'].apply(gen).apply(low).apply(low).apply(stopw).apply(lemma)
 ```
 ---
+
+## Feature extraction user guide on df or on list
++ For CountVectorizer
+```
+       df1 = countvec(df)
+```
++ For TfidfVectorizer
+```
+       df1 = tfidf(df)
+```
+
 ### Finally WordCloud
    ```
    WCloud(dfcleaned.tweets)
