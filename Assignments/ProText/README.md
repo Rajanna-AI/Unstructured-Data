@@ -58,9 +58,9 @@ Install `ProText` on your system using :
       ```
        stopadd = ['sample', 'much', 'thank']
       
-       df['tweet']= df['tweet'].apply(stopw, args=(stopadd,))
+       df['tweets']= df['tweets'].apply(stopw, args=(stopadd,))
                            or
-       df['tweet']= df['tweet'].apply(stopw, args=(['sample', 'much', 'thank'],))
+       df['tweets']= df['tweets'].apply(stopw, args=(['sample', 'much', 'thank'],))
        ```
  
 > If there are multiple lines, better convert to Dataframe
