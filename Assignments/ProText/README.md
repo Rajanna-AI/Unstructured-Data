@@ -73,14 +73,14 @@ Install `ProText` on your system using :
 
 ### Finally WordCloud
    ```
-   WCloud(dfcleaned.tweets)
+       WCloud(dfcleaned.tweets)
    ```
-## Feature extraction user guide on df or on list
+## Feature extraction user guide on df or list
 + For CountVectorizer
 ```
-       df1 = countvec(df)
+       cv_vect, cv_feature, cvdf = countvec(dfcleaned)
 ```
 + For TfidfVectorizer
 ```
-       df1 = tfidf(df)
+       tfidf_vect, tfidf_feature, tfidfdf = tfidf(dfcleaned)
 ```
